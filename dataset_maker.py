@@ -19,7 +19,7 @@ charges = list()
 CN_Cu_full_list = []
 CN_Ni_full_list = []
 min_N1_d_full_list = [] 
-min_N2_d_full_list = []
+max_N2_d_full_list = []
 CN_distance_full_list = []
 
 total_charges_sum_dis_Cu_25_30 = []
@@ -220,7 +220,7 @@ for n in range(1,128):
 
     
     min_N1 = min(N1_distances.values())
-    min_N2 = min(N2_distances.values())
+    max_N2 = max(N2_distances.values())
 
     
     
@@ -254,7 +254,7 @@ ads_energy = ad_energy_df.adsorption_energy
 cn_df = pd.DataFrame(
     {'#adsite': adsite_index,
      'min_N1_distance': min_N1_d_full_list,
-     'min_N2_distance': min_N2_d_full_list,
+     'max_N2_distance': min_N2_d_full_list,
      'adsite_Cu_CN_dis2.5-3.0': CN_Cu_25_30,
      'adsite_Ni_CN_dis2.5-3.0': CN_Ni_25_30,
      'adsite_Cu_CN_dis3.0-3.5': CN_Cu_30_35,
